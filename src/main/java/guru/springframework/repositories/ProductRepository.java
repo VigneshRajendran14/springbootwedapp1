@@ -1,7 +1,8 @@
 package guru.springframework.repositories;
 
-import guru.springframework.domain.Product;
 import org.springframework.data.repository.CrudRepository;
+
+import guru.springframework.domain.Product;
 
 public interface ProductRepository extends CrudRepository<Product, Integer>{
 }

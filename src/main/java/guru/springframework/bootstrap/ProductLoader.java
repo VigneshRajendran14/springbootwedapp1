@@ -1,14 +1,12 @@
 package guru.springframework.bootstrap;
 
-import guru.springframework.domain.Product;
-import guru.springframework.repositories.ProductRepository;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationListener;
 import org.springframework.context.event.ContextRefreshedEvent;
 import org.springframework.stereotype.Component;
 
-import java.math.BigDecimal;
+import guru.springframework.repositories.ProductRepository;
 
 @Component
 public class ProductLoader implements ApplicationListener<ContextRefreshedEvent> {
