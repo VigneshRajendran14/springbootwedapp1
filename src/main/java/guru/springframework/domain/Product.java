@@ -1,21 +1,24 @@
 package guru.springframework.domain;
 
 import javax.persistence.*;
+
 import java.math.BigDecimal;
 
 @Entity
+@Table 
 public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
 
     @Version
+    
     private Integer version;
-
+    
     private String productId;
     private String description;
-    private String imageUrl;
     private BigDecimal price;
+    private Integer quantity;
 
     public String getDescription() {
         return description;
@@ -49,14 +52,6 @@ public class Product {
         this.productId = productId;
     }
 
-    public String getImageUrl() {
-        return imageUrl;
-    }
-
-    public void setImageUrl(String imageUrl) {
-        this.imageUrl = imageUrl;
-    }
-
     public BigDecimal getPrice() {
         return price;
     }
@@ -64,4 +59,12 @@ public class Product {
     public void setPrice(BigDecimal price) {
         this.price = price;
     }
+
+	public Integer getQuantity() {
+		return quantity;
+	}
+
+	public void setQuantity(Integer quantity) {
+		this.quantity = quantity;
+	}
 }
